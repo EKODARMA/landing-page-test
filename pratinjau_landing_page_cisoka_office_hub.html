@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisoka Office Hub — Virtual Office & Sewa Ruang Kantor Cisoka, Tangerang</title>
+    <meta name="description" content="Solusi Virtual Office, alamat domisili PT/CV resmi, dan sewa ruang kantor siap pakai di Perumahan Surya Jaya Indah, Cisoka, Kabupaten Tangerang.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#090D16',
+                        },
+                        gold: {
+                            500: '#F59E0B',
+                            600: '#D97706',
+                            700: '#B45309',
+                        },
+                        wa: {
+                            500: '#22C55E',
+                            600: '#16A34A',
+                            700: '#15803D',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500/20 selection:text-navy-900">
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center text-gold-500 shadow-sm group-hover:bg-navy-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-extrabold text-lg tracking-tight text-navy-900 leading-none">CISOKA OFFICE HUB</span>
+                        <span class="block text-xs font-medium text-slate-500 mt-1">Surya Jaya Indah • Tangerang</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#keunggulan" class="text-sm font-semibold text-slate-600 hover:text-navy-900 transition-colors">Keunggulan</a>
+                    <a href="#paket" class="text-sm font-semibold text-slate-600 hover:text-navy-900 transition-colors">Paket & Harga</a>
+                    <a href="#kalkulator" class="text-sm font-semibold text-slate-600 hover:text-navy-900 transition-colors">Simulasi Hemat</a>
+                    <a href="#faq" class="text-sm font-semibold text-slate-600 hover:text-navy-900 transition-colors">FAQ</a>
+                    <a href="#lokasi" class="text-sm font-semibold text-slate-600 hover:text-navy-900 transition-colors">Lokasi</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button onclick="openWaModal('Halo Cisoka Office Hub, saya ingin bertanya tentang layanan sewa kantor / virtual office.')" class="inline-flex items-center gap-2 bg-wa-600 hover:bg-wa-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm shadow-wa-600/20 transition-all cursor-pointer">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                        <span>Tanya via WA</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#keunggulan" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Keunggulan</a>
+            <a href="#paket" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Paket & Harga</a>
+            <a href="#kalkulator" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Simulasi Hemat</a>
+            <a href="#faq" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">FAQ</a>
+            <a href="#lokasi" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50">Lokasi</a>
+            <div class="pt-2">
+                <button onclick="openWaModal('Halo Cisoka Office Hub, saya ingin bertanya tentang layanan sewa kantor / virtual office.')" class="w-full flex items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 text-white font-bold px-5 py-3.5 rounded-xl shadow-sm">
+                    <span>Konsultasi via WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative overflow-hidden bg-navy-900 text-white pt-14 pb-20 lg:pt-24 lg:pb-28">
+        <!-- Decorative Background Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold-500 blur-3xl"></div>
+            <div class="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-blue-500 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Copywriting & CTA -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-gold-500 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                        <span>Lokasi Strategis • Cisoka, Kabupaten Tangerang</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+                        Domisili Bisnis Resmi & Ruang Kerja Nyaman di <span class="text-gold-500">Cisoka, Tangerang</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        Solusi hemat biaya untuk pendirian PT/CV, legalitas usaha (NIB/PKP), dan ruang kerja siap pakai di lingkungan tenang <strong class="text-white font-semibold">Perumahan Surya Jaya Indah</strong>.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <button onclick="openWaModal('Halo Cisoka Office Hub, saya ingin konsultasi dan cek ketersediaan Virtual Office / Ruang Kantor di Cisoka.')" class="inline-flex items-center justify-center gap-2.5 bg-wa-600 hover:bg-wa-500 text-white font-bold text-base px-7 py-4 rounded-xl shadow-lg shadow-wa-600/25 transition-all cursor-pointer">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                            <span>Konsultasi via WhatsApp</span>
+                        </button>
+                        <a href="#paket" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-base px-7 py-4 rounded-xl transition-all">
+                            <span>Lihat Pilihan Paket</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Trust Micro-Points -->
+                    <div class="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <span>Tanpa biaya tersembunyi</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <span>Aktivasi cepat 1 hari kerja</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            <span>Dukungan survei lokasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Clean Architectural UI Card Preview -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-800/80 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm space-y-6">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                            <div>
+                                <p class="text-xs uppercase tracking-wider text-gold-500 font-bold">Ringkasan Fasilitas</p>
+                                <h2 class="text-lg font-bold text-white mt-0.5">Perumahan Surya Jaya Indah</h2>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-wa-600/20 text-wa-500 text-xs font-bold border border-wa-500/30">
+                                Unit Tersedia
+                            </span>
+                        </div>
+
+                        <!-- Visual Facility Grid -->
+                        <div class="grid grid-cols-2 gap-3.5">
+                            <div class="bg-navy-900/90 border border-white/5 p-4 rounded-xl">
+                                <div class="w-9 h-9 rounded-lg bg-gold-500/15 text-gold-500 flex items-center justify-center mb-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <p class="text-sm font-bold text-white">Domisili PT / CV</p>
+                                <p class="text-xs text-slate-400 mt-1">Valid untuk NIB, NPWP & OSS RBA</p>
+                            </div>
+
+                            <div class="bg-navy-900/90 border border-white/5 p-4 rounded-xl">
+                                <div class="w-9 h-9 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center mb-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <p class="text-sm font-bold text-white">Notifikasi Surat</p>
+                                <p class="text-xs text-slate-400 mt-1">Info paket masuk langsung ke WA</p>
+                            </div>
+
+                            <div class="bg-navy-900/90 border border-white/5 p-4 rounded-xl">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+                                </div>
+                                <p class="text-sm font-bold text-white">Wi-Fi High Speed</p>
+                                <p class="text-xs text-slate-400 mt-1">Koneksi fiber stabil untuk kerja</p>
+                            </div>
+
+                            <div class="bg-navy-900/90 border border-white/5 p-4 rounded-xl">
+                                <div class="w-9 h-9 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center mb-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <p class="text-sm font-bold text-white">Ruang Meeting</p>
+                                <p class="text-xs text-slate-400 mt-1">Nyaman untuk temu klien & survei</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-950/60 rounded-xl p-4 border border-white/5 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-slate-400">Mulai dari</p>
+                                <p class="text-xl font-extrabold text-white">Rp 250.000 <span class="text-xs font-normal text-slate-400">/ bulan</span></p>
+                            </div>
+                            <a href="#paket" class="text-xs font-bold text-gold-500 hover:text-gold-400 underline underline-offset-4">
+                                Bandingkan Paket →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KEUNGGULAN UTAMA ==================== -->
+    <section id="keunggulan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Mengapa Memilih Kami</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 mt-2">
+                    Solusi Kantor Profesional Tanpa Beban Biaya Sewa Ruko
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Dirancang khusus bagi pelaku UMKM, kontraktor, konsultan, maupun perusahaan baru di wilayah Kabupaten Tangerang yang membutuhkan alamat bisnis kredibel.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-md hover:border-slate-300 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2">Legalitas & Domisili Resmi</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Alamat fisik terverifikasi yang mendukung pengurusan akta pendirian PT/CV, NIB, NPWP perusahaan, hingga keperluan rekening bank.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-md hover:border-slate-300 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2">Hemat Biaya Operasional</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Pangkas biaya sewa ruko tahunan, renovasi interior, listrik, dan gaji resepsionis hingga 80% agar modal fokus ke pengembangan usaha.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-md hover:border-slate-300 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2">Resepsionis & Tata Surat</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Setiap dokumen, surat pajak, atau paket kurir yang datang akan diterima dengan aman dan langsung diinformasikan via WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-md hover:border-slate-300 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2">Akses Strategis Tangerang</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Berlokasi di Perumahan Surya Jaya Indah, Cisoka — lingkungan rapi, parkir mudah, serta dekat dengan koridor Cikupa, Balaraja, & Tigaraksa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAKET & HARGA ==================== -->
+    <section id="paket" class="py-20 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Pilihan Layanan</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 mt-2">
+                    Paket Fleksibel Sesuai Tahap Bisnis Anda
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Pilih paket tahunan untuk tarif lebih hemat atau paket bulanan sesuai kebutuhan operasional Anda.
+                </p>
+
+                <!-- Interactive Billing Toggle -->
+                <div class="mt-8 inline-flex items-center p-1.5 bg-slate-200/80 rounded-xl">
+                    <button id="btn-yearly" onclick="setBilling('yearly')" class="px-5 py-2.5 rounded-lg text-sm font-bold bg-navy-900 text-white shadow-sm transition-all cursor-pointer">
+                        Paket Tahunan <span class="ml-1 text-xs font-semibold text-gold-400">(Hemat 2 Bulan)</span>
+                    </button>
+                    <button id="btn-monthly" onclick="setBilling('monthly')" class="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-600 hover:text-navy-900 transition-all cursor-pointer">
+                        Paket Bulanan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Paket 1: Virtual Office Basic -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Virtual Office</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mt-1">Virtual Office Basic</h3>
+                        <p class="text-sm text-slate-500 mt-2">Cocok untuk freelancer, konsultan, dan bisnis rintisan yang butuh alamat domisili.</p>
+
+                        <div class="my-6 pb-6 border-b border-slate-100">
+                            <div class="flex items-baseline gap-1">
+                                <span id="price-basic" class="text-3xl sm:text-4xl font-extrabold text-navy-900">Rp 2.500.000</span>
+                                <span id="period-basic" class="text-sm font-medium text-slate-500">/ tahun</span>
+                            </div>
+                            <p id="note-basic" class="text-xs text-emerald-600 font-semibold mt-1">Setara Rp 208.000 / bulan</p>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Alamat domisili usaha resmi di Surya Jaya Indah, Cisoka</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Layanan penerimaan surat & paket kurir</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Notifikasi surat masuk secara real-time via WhatsApp</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Pencantuman nama perusahaan di direktori kantor</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackage('Virtual Office Basic')" class="w-full py-3.5 px-5 rounded-xl border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-bold text-sm transition-all cursor-pointer">
+                            Pilih Paket Basic
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paket 2: Virtual Office Pro (Highlighted) -->
+                <div class="bg-navy-900 text-white border-2 border-gold-500 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-xl relative">
+                    <div class="absolute -top-3.5 right-6 bg-gold-500 text-navy-950 text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+                        Paling Diminati
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Rekomendasi PT / CV</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Virtual Office Pro</h3>
+                        <p class="text-sm text-slate-300 mt-2">Paket lengkap untuk pendirian PT/CV baru, pengurusan PKP, dan verifikasi perbankan.</p>
+
+                        <div class="my-6 pb-6 border-b border-white/10">
+                            <div class="flex items-baseline gap-1">
+                                <span id="price-pro" class="text-3xl sm:text-4xl font-extrabold text-white">Rp 3.900.000</span>
+                                <span id="period-pro" class="text-sm font-medium text-slate-400">/ tahun</span>
+                            </div>
+                            <p id="note-pro" class="text-xs text-gold-400 font-semibold mt-1">Setara Rp 325.000 / bulan • Termasuk SK Domisili</p>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-200">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span><strong class="text-white">Semua fasilitas Paket Basic</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Surat Keterangan Domisili Gedung & perjanjian sewa resmi</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Gratis penggunaan <strong class="text-white">Ruang Meeting 4 jam / bulan</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Pendampingan penuh saat survei Bank / KPP Pajak (PKP)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Layanan pemindaian (scan) dokumen penting via WA/Email</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackage('Virtual Office Pro')" class="w-full py-3.5 px-5 rounded-xl bg-wa-600 hover:bg-wa-500 text-white font-bold text-sm shadow-lg shadow-wa-600/25 transition-all cursor-pointer">
+                            Pilih Paket Pro via WA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paket 3: Private Office / Ruang Kantor -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-7 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Ruang Kerja Fisik</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy-900 mt-1">Private Office</h3>
+                        <p class="text-sm text-slate-500 mt-2">Ruang kantor fisik siap pakai untuk tim operasional harian yang butuh privasi.</p>
+
+                        <div class="my-6 pb-6 border-b border-slate-100">
+                            <div class="flex items-baseline gap-1">
+                                <span id="price-private" class="text-3xl sm:text-4xl font-extrabold text-navy-900">Rp 15.000.000</span>
+                                <span id="period-private" class="text-sm font-medium text-slate-500">/ tahun</span>
+                            </div>
+                            <p id="note-private" class="text-xs text-emerald-600 font-semibold mt-1">Atau Rp 1.500.000 / bulan • Siap Huni</p>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Ruang kerja privat ber-AC dengan kunci akses mandiri</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Sudah termasuk meja, kursi kerja ergonomis & lemari arsip</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Gratis biaya listrik, air, kebersihan & Wi-Fi Fiber</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-wa-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span>Termasuk seluruh fasilitas domisili & surat-menyurat</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <button onclick="selectPackage('Sewa Ruang Kantor (Private Office)')" class="w-full py-3.5 px-5 rounded-xl border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-bold text-sm transition-all cursor-pointer">
+                            Cek Ketersediaan Ruang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SIMULASI HEMAT BIAYA ==================== -->
+    <section id="kalkulator" class="py-20 bg-white border-t border-slate-200/80">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-6 space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Simulasi Penghematan</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+                            Bandingkan Sewa Ruko Konvensional vs Cisoka Office Hub
+                        </h2>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Geser estimasi biaya sewa ruko per tahun di area Tangerang untuk melihat berapa besar efisiensi modal bisnis Anda.
+                        </p>
+
+                        <div class="pt-2 space-y-2">
+                            <div class="flex justify-between text-sm font-semibold">
+                                <span class="text-slate-300">Estimasi Sewa Ruko / Tahun:</span>
+                                <span id="ruko-label" class="text-gold-400 font-bold">Rp 35.000.000</span>
+                            </div>
+                            <input id="ruko-slider" type="range" min="20000000" max="75000000" step="5000000" value="35000000" oninput="calculateSavings()" class="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                            <div class="flex justify-between text-xs text-slate-400">
+                                <span>Rp 20 Juta</span>
+                                <span>Rp 50 Juta</span>
+                                <span>Rp 75 Juta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-navy-800/90 border border-white/10 rounded-2xl p-6 space-y-4">
+                        <div class="flex justify-between items-center text-sm pb-3 border-b border-white/10">
+                            <span class="text-slate-300">Sewa Ruko + Listrik & Internet (1 Thn)</span>
+                            <span id="total-ruko" class="font-bold text-rose-400">Rp 44.600.000</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pb-3 border-b border-white/10">
+                            <span class="text-slate-300">Virtual Office Pro Cisoka (1 Thn)</span>
+                            <span class="font-bold text-white">Rp 3.900.000</span>
+                        </div>
+                        <div class="pt-1">
+                            <p class="text-xs uppercase tracking-wider text-slate-400">Potensi Penghematan Tahunan Anda</p>
+                            <p id="total-saved" class="text-3xl sm:text-4xl font-extrabold text-wa-500 mt-1">Rp 40.700.000</p>
+                            <p class="text-xs text-slate-300 mt-1">Dana tersebut dapat dialihkan untuk stok produk, pemasaran, atau gaji tim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Pertanyaan Umum</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-2">
+                    Hal yang Sering Ditanyakan Calon Penyewa
+                </h2>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(0)" class="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-navy-900 hover:bg-slate-50/80 transition-colors cursor-pointer">
+                        <span class="text-sm sm:text-base pr-4">Apakah alamat ini bisa digunakan untuk pembuatan PT atau CV baru?</span>
+                        <svg id="faq-icon-0" class="w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="faq-content-0" class="px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Ya, sangat bisa. Alamat kami di Perumahan Surya Jaya Indah, Cisoka, Kabupaten Tangerang dapat digunakan untuk akta pendirian PT, PT Perorangan, maupun CV, serta memenuhi syarat pendaftaran NIB di sistem OSS RBA dan NPWP Badan.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-navy-900 hover:bg-slate-50/80 transition-colors cursor-pointer">
+                        <span class="text-sm sm:text-base pr-4">Bagaimana mekanisme jika ada surat atau paket yang dikirim ke kantor?</span>
+                        <svg id="faq-icon-1" class="w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Tim resepsionis kami akan menerima dan mencatat setiap surat atau paket yang masuk atas nama perusahaan Anda, lalu mengirimkan foto serta notifikasi melalui WhatsApp pada hari yang sama. Anda dapat mengambilnya kapan saja pada jam operasional atau meminta pengiriman via kurir.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-navy-900 hover:bg-slate-50/80 transition-colors cursor-pointer">
+                        <span class="text-sm sm:text-base pr-4">Apakah tersedia fasilitas pendampingan survei untuk verifikasi bank atau PKP?</span>
+                        <svg id="faq-icon-2" class="w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Tersedia. Untuk pelanggan Paket Virtual Office Pro dan Private Office, kami menyediakan papan nama perusahaan sementara saat jadwal survei serta ruang meeting representatif untuk menyambut petugas verifikasi bank maupun KPP Pratama.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-5 sm:p-6 text-left font-bold text-navy-900 hover:bg-slate-50/80 transition-colors cursor-pointer">
+                        <span class="text-sm sm:text-base pr-4">Apa saja syarat dokumen untuk mulai berlangganan?</span>
+                        <svg id="faq-icon-3" class="w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-5 sm:px-6 pb-5 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Sangat mudah: cukup siapkan foto KTP penanggung jawab (Direktur/Pemilik), NPWP pribadi/perusahaan, serta draft nama perusahaan (jika badan usaha masih dalam proses pendirian notaris). Aktivasi selesai dalam 1 hari kerja.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOKASI & FOOTER ==================== -->
+    <footer id="lokasi" class="bg-navy-950 text-slate-300 pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Kolom Info Kantor -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-gold-500 text-navy-950 flex items-center justify-center font-extrabold">
+                            C
+                        </div>
+                        <span class="font-extrabold text-lg text-white tracking-tight">CISOKA OFFICE HUB</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Penyedia layanan Virtual Office terpercaya dan ruang kantor siap pakai di wilayah Cisoka, Kabupaten Tangerang. Membantu bisnis Anda tampil profesional dengan biaya efisien.
+                    </p>
+                    <div class="space-y-2.5 pt-2 text-sm">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span>Perumahan Surya Jaya Indah, Kec. Cisoka, Kabupaten Tangerang, Banten 15730</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-gold-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span>Senin – Sabtu: 08.00 – 17.00 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Navigasi -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#keunggulan" class="hover:text-gold-400 transition-colors">Keunggulan Layanan</a></li>
+                        <li><a href="#paket" class="hover:text-gold-400 transition-colors">Daftar Paket & Harga</a></li>
+                        <li><a href="#kalkulator" class="hover:text-gold-400 transition-colors">Kalkulator Hemat Biaya</a></li>
+                        <li><a href="#faq" class="hover:text-gold-400 transition-colors">Pertanyaan Umum (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom Kartu Peta Lokasi -->
+                <div class="lg:col-span-4">
+                    <div class="bg-navy-900 border border-white/10 rounded-2xl p-5 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold text-gold-500 uppercase">Titik Lokasi</p>
+                                <p class="text-sm font-bold text-white mt-0.5">Perumahan Surya Jaya Indah</p>
+                            </div>
+                            <span class="text-xs bg-white/10 px-2.5 py-1 rounded-lg text-slate-300">Cisoka</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            ± 10 menit dari Pusat Pemerintahan Kab. Tangerang (Tigaraksa) & akses mudah menuju Tol Balaraja Barat.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Perumahan+Surya+Jaya+Indah+Cisoka+Tangerang" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition-colors">
+                                <span>Buka Google Maps</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <button onclick="openWaModal('Halo Cisoka Office Hub, saya ingin menjadwalkan survei lokasi ke Perumahan Surya Jaya Indah, Cisoka.')" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-wa-600 hover:bg-wa-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition-colors cursor-pointer">
+                                <span>Jadwalkan Survei</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© 2026 Cisoka Office Hub — Perumahan Surya Jaya Indah, Cisoka, Tangerang.</p>
+                <p>Pratinjau Landing Page • Siap disesuaikan dengan nomor WhatsApp & harga resmi Anda.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <button onclick="openWaModal('Halo Cisoka Office Hub, saya ingin bertanya tentang layanan Virtual Office / Sewa Ruang Kantor.')" aria-label="Chat WhatsApp" class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 bg-wa-600 hover:bg-wa-500 text-white font-bold text-sm px-4 py-3.5 rounded-full shadow-xl shadow-wa-600/30 transition-transform hover:scale-105 cursor-pointer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+        <span class="hidden sm:inline">Chat WhatsApp</span>
+    </button>
+
+    <!-- ==================== INTERACTIVE WHATSAPP PREVIEW MODAL ==================== -->
+    <div id="wa-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-950/70 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 animate-fade-in">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-wa-500"></span>
+                    <h3 class="font-bold text-navy-900 text-base">Pratinjau Pesan WhatsApp</h3>
+                </div>
+                <button onclick="closeWaModal()" class="text-slate-400 hover:text-slate-700 p-1 rounded-lg cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <div class="py-4 space-y-3">
+                <p class="text-xs text-slate-500">
+                    Saat pengunjung mengklik tombol CTA di halaman Anda, mereka akan langsung diarahkan ke WhatsApp dengan teks otomatis berikut:
+                </p>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-sm text-navy-900 font-medium" id="wa-preview-text">
+                    Halo Cisoka Office Hub...
+                </div>
+                <div class="text-xs text-slate-500">
+                    Nomor tujuan sementara: <code class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-navy-900">6281234567890</code> (dapat Anda ubah di dalam kode).
+                </div>
+            </div>
+
+            <div class="flex items-center justify-end gap-3 pt-2">
+                <button onclick="closeWaModal()" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer">
+                    Tutup Pratinjau
+                </button>
+                <a id="wa-direct-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-wa-600 hover:bg-wa-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm">
+                    <span>Tes Buka WhatsApp</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT INTERACTIONS ==================== -->
+    <script>
+        // Nomor WhatsApp Bisnis (Ganti dengan nomor aktif Anda, format 628xxx)
+        const WHATSAPP_NUMBER = "6281234567890";
+        let currentBilling = "yearly";
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // 2. Toggle Harga Tahunan vs Bulanan
+        function setBilling(mode) {
+            currentBilling = mode;
+            const btnYearly = document.getElementById('btn-yearly');
+            const btnMonthly = document.getElementById('btn-monthly');
+
+            if (mode === 'yearly') {
+                btnYearly.className = "px-5 py-2.5 rounded-lg text-sm font-bold bg-navy-900 text-white shadow-sm transition-all cursor-pointer";
+                btnMonthly.className = "px-5 py-2.5 rounded-lg text-sm font-bold text-slate-600 hover:text-navy-900 transition-all cursor-pointer";
+
+                document.getElementById('price-basic').textContent = "Rp 2.500.000";
+                document.getElementById('period-basic').textContent = "/ tahun";
+                document.getElementById('note-basic').textContent = "Setara Rp 208.000 / bulan";
+
+                document.getElementById('price-pro').textContent = "Rp 3.900.000";
+                document.getElementById('period-pro').textContent = "/ tahun";
+                document.getElementById('note-pro').textContent = "Setara Rp 325.000 / bulan • Termasuk SK Domisili";
+
+                document.getElementById('price-private').textContent = "Rp 15.000.000";
+                document.getElementById('period-private').textContent = "/ tahun";
+                document.getElementById('note-private').textContent = "Atau Rp 1.500.000 / bulan • Siap Huni";
+            } else {
+                btnMonthly.className = "px-5 py-2.5 rounded-lg text-sm font-bold bg-navy-900 text-white shadow-sm transition-all cursor-pointer";
+                btnYearly.className = "px-5 py-2.5 rounded-lg text-sm font-bold text-slate-600 hover:text-navy-900 transition-all cursor-pointer";
+
+                document.getElementById('price-basic').textContent = "Rp 250.000";
+                document.getElementById('period-basic').textContent = "/ bulan";
+                document.getElementById('note-basic').textContent = "Minimal sewa 3 bulan";
+
+                document.getElementById('price-pro').textContent = "Rp 390.000";
+                document.getElementById('period-pro').textContent = "/ bulan";
+                document.getElementById('note-pro').textContent = "Minimal sewa 6 bulan • Termasuk SK Domisili";
+
+                document.getElementById('price-private').textContent = "Rp 1.500.000";
+                document.getElementById('period-private').textContent = "/ bulan";
+                document.getElementById('note-private').textContent = "Fleksibel bulanan • Siap Huni";
+            }
+        }
+
+        // 3. Kalkulator Penghematan Biaya
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function calculateSavings() {
+            const sewaRuko = parseInt(document.getElementById('ruko-slider').value, 10);
+            const operasionalRuko = 9600000; // Estimasi listrik, internet, & kebersihan ruko 1 tahun
+            const totalRuko = sewaRuko + operasionalRuko;
+            const biayaVo = 3900000;
+            const hemat = totalRuko - biayaVo;
+
+            document.getElementById('ruko-label').textContent = formatRupiah(sewaRuko);
+            document.getElementById('total-ruko').textContent = formatRupiah(totalRuko);
+            document.getElementById('total-saved').textContent = formatRupiah(hemat);
+        }
+
+        // 4. FAQ Accordion
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            const isHidden = content.classList.contains('hidden');
+
+            // Tutup semua item lain agar rapi
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`faq-content-${i}`).classList.add('hidden');
+                document.getElementById(`faq-icon-${i}`).classList.remove('rotate-180');
+            }
+
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // 5. WhatsApp CTA Handler & Preview Modal
+        function selectPackage(packageName) {
+            const durasiText = currentBilling === 'yearly' ? 'Paket Tahunan' : 'Paket Bulanan';
+            const message = `Halo Cisoka Office Hub, saya tertarik dengan layanan *${packageName}* (${durasiText}) di Perumahan Surya Jaya Indah, Cisoka. Mohon info detail dan ketersediaannya.`;
+            openWaModal(message);
+        }
+
+        function openWaModal(message) {
+            const modal = document.getElementById('wa-modal');
+            const previewText = document.getElementById('wa-preview-text');
+            const directLink = document.getElementById('wa-direct-link');
+
+            previewText.textContent = message;
+            directLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWaModal() {
+            const modal = document.getElementById('wa-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
